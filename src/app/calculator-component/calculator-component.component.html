@@ -1,0 +1,23 @@
+<div class="calculator">
+    <app-display-component [userInput]="displayValue"></app-display-component>
+    <div class="button">
+        <div class="button_special">
+            <app-add-button-component (addClick)="onOperationButtonClick($event)"></app-add-button-component>
+            <app-divide-button-component (divideClick)="onOperationButtonClick($event)"></app-divide-button-component>
+            <app-multiply-button-component (multiplyClick)="onOperationButtonClick($event)"></app-multiply-button-component>
+            <app-subtract-button-component (subtractClick)="onOperationButtonClick($event)"></app-subtract-button-component>
+        </div>
+        <div class="button_bottom">
+            <app-number-button-component (numberSelected)="onButtonClick($event)">
+                <button id="pointBtn" #pointButton>.</button>
+            </app-number-button-component>
+            <div class="button_bottom_sp">
+                <app-equals-button-component (equalsClick)="onEqualsSelected()"></app-equals-button-component>
+                <app-delete-button-component (deleteLastClick)="onDelClick()"></app-delete-button-component>
+                <app-clear-button-component (clearClick)="clear()"></app-clear-button-component>
+                <!-- <button class="button_bottom_sp_clear" (click)="clear()">C</button> -->
+            </div>
+            
+        </div>
+    </div>
+</div>
