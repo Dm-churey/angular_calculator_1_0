@@ -1,0 +1,18 @@
+button{
+    width: 70px;
+    height: 40px;
+    font-size: 18px;
+    outline: none;
+    border-radius: 5px;
+    background-color: #443f37;
+    color: white;
+
+    &:hover{
+        background-color: #2f2618;
+    }
+
+    &:active{
+        background-color: #2f2618;
+        border: none;
+    }
+}
